@@ -2,7 +2,7 @@ module Api
     module V1
         class AleatoriosController < ApplicationController
             def index 
-                 aleatorios = Aleatorio.order('created_at');
+                 aleatorios = Aleatorio.order('id');
                  render json: {status: 'SUCCESS', message: 'Loaded number', data:aleatorios}, status: :ok
             
             
